@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>分页</title>
+  <link rel="stylesheet" href="pageL.css">
+</head>
+<body>
+    <div><ul class="page" maxshowpageitem="5" pagelistcount="10"  id="page"></ul></div>
+    <br>
+    <br>
+    <br>
+    <pre>&lt;ul class="page" maxshowpageitem="5" pagelistcount="10"  id="page"&gt;&lt;/ul&gt;</pre>
+    <p>maxshowpageitem ：最多显示的页码数字</p>
+    <p>pagelistcount : 每一个页面显示的数据的个数</p>
+    
+
+
+  <script src="jquery.min.js"></script>
+  <script src="pageL.js"></script>
+  <script>
+  $("#page").initPage(50,1,zhuRu);//显示分页，50是数据总数，1是显示第一页，zhuRu是回调函数（这里是数据注入）
+    function zhuRu(data){
+      alert(data);
+    }
+  </script>
+</body>
+</html>
